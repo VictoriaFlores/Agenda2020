@@ -1,0 +1,95 @@
+  <!-- ======== @Region: #content ======== -->
+  <div id="content">
+    <div class="container">
+      <h2><strong>Agenda de Victoria</strong></h2>
+      <hr>
+      <!--Intro-->
+        <h4 class="block-title">Mis Actividades</h4>
+      <div>
+        
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Actividad</th>
+              <th>Fecha</th>
+              <th>Lugar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--tr ng-repeat="act in actividades" style="background-color:{{$even?'white':'yellow'}}"-->
+            <tr ng-repeat="act in actividades">
+              <td rowcol-md-="2">{{$index}}</td>
+              <td rowcol-md-="2">{{act.nombre}}</td>
+              <td rowcol-md-="2">{{act.fecha}}</td>
+              <td rowcol-md-="2">{{act.lugar}}</td>
+              <td rowcol-md-="2">X</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mission text-center block block-pd-sm block-bg-noise" ng-hide="form===true">
+      <div class="container">
+        <h4 class="text-shadow-white"><strong>Para crear una nueva Actividad!</strong></h4>
+            <div class="text-center">
+              <button ng-click="form = true" ng-init="form = false" ng-style="background_base">
+                 <i class="fa fa-arrow-circle-right"></i>Click Aquí!
+              </button>
+            </div>          
+      </div>
+    </div>
+      <!--Intro-->
+      <!--p>Flexor contains <a href="http://getbootstrap.com/">all the standard Bootstrap goodies</a> and more, here's a quick overview of some of the key elements which aren't obvious throughout the template.</p-->
+    <div class="row" id="nueva_act">
+    <div class="col-md-3"></div>
+    <div class="form col-md-6" ng-show="form===true">
+      <form action="" method="post" role="form" class="contactForm" reset-directive="actividades">
+
+        <div class="form-group ">
+          <label for="nombre" class="col-md-2">Nombre:</label>
+          <input id="nombre" name="nombre" type="text" class="col-md-6" ng-style="css_form" ng-model="actividades.nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+          <div class="validation"></div>
+        </div><br><br><br>
+
+        <div class="form-group">
+          <label for="fecha" class="col-md-2">Fecha:</label>
+          <input id="fecha" name="fecha" type="date" class="col-md-6" ng-style="css_form" ng-model="actividades.fecha" />
+          <div class="validation"></div>
+        </div><br><br>
+
+        <div class="form-group">
+          <label for="lugar" class="col-md-2">Lugar:</label>
+          <input id="lugar" name="lugar" type="text" class="col-md-6" ng-style="css_form" ng-model="actividades.lugar"/>
+        </div><br><br>
+
+        <div class="form-group">
+          <label for="categoria" class="col-md-2">Categoría:</label>
+          <select id="categoria" name="categoria" type="checkbox" class="col-md-6" ng-style="css_form"ng-model="actividades.categoria" >
+            <option value="">--Elige opcion--</option>
+            <option value="M">Movible</option>
+            <option value="I">Inamovible</option>
+          </select>
+        </div><br><br>
+
+        <div class="form-group">
+          <label for="alarma" class="col-md-2">Alarma:</label>
+          <input id="alarma" name="alarma" type="checkbox" class="col-md-6 pull-right" ng-style="css_form" ng-model="actividades.alarma" />
+        </div><br><br>
+
+        <div>
+          <label for="hora" class="col-md-2">Hora:</label>
+          <input id="hora" name="hora" type="text" class="col-md-6" ng-style="css_form" ng-disabled="actividades.alarma==false" ng-init="actividad.alarma=false" ng-model="actividades.hora" />
+        </div><br><br>
+
+        <div class="text-center">
+          <button type="submit" ng-click="addActividad()">Aceptar</button>
+          <button type="reset" >Limpiar</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+      
+

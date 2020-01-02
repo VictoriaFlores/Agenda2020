@@ -1,0 +1,67 @@
+  <div class="container" data-block-bg-img="../css/img/bg_footer-map.png" data-stellar-background-ratio="0.4">
+      <br>
+      <div class="row" id="contact">
+
+        <div class="col-md-3">
+          <address>
+              <strong>María Victoria Flores</strong>
+              <br>
+              <i class="fa fa-map-pin fa-fw text-primary"></i> San Miguel de Tucumán
+              <br> 
+              <i class="fa fa-phone fa-fw text-primary"></i> 0381-6-695115
+              <br>
+              <i class="fa fa-envelope-o fa-fw text-primary"></i> victoria.flores@gmail.com
+              <br>
+            </address>
+        </div>
+
+        <div class="col-md-6">
+          <h4 class="text-uppercase" ng-style="color_black" ><strong>Contáctame</strong>              
+          </h4>
+          <div class="form">
+            <form action="" method="post" role="form" class="contactForm"  reset-directive="msj">
+
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" ng-model="msj.nombre"/>
+                <div class="validation"></div>
+              </div>
+
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" ng-model="msj.email"/>
+                <div class="validation"></div>
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" ng-model="msj.asunto"/>
+                <div class="validation"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje" ng-model="msj.mensaje"></textarea>
+                <div class="validation"></div>
+              </div>
+
+              <div class="text-center"><button type="submit" ng-style="background_base" ng-click="enviarMsj()">Enviar el mensaje</button></div>
+              <br>
+            </form>
+          </div>
+          <div id="sendmessage" class="text-center" ng-show="success" ng-style="background_base">Mensaje enviado con Exito</div> 
+          <div id="errormessage" class="text-center" ng-show="error" ng-style="background_base">No fue posible enviar el mensaje</div>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="text-uppercase" ng-style="color_black" >
+            <strong>Sigueme en:</strong>
+          </h4>
+          <!--social media icons-->
+          <div class="social-media social-media-stacked">
+            <!--@todo: replace with company social media details-->
+            <a href="#"><i class="fa fa-twitter fa-fw" ng-style="color_black"></i> Twitter</a>
+            <a ng-href="{{face}}"><i class="fa fa-facebook fa-fw" ng-style="color_black"></i> Facebook</a>
+            <a href="#"><i class="fa fa-linkedin fa-fw" ng-style="color_black"></i> LinkedIn</a>
+            <a href="#"><i class="fa fa-google-plus fa-fw" ng-style="color_black"></i> Google+</a>
+          </div>
+        </div>
+
+      </div>
+    </div>

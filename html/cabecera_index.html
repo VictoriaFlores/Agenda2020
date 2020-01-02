@@ -1,0 +1,79 @@
+<!--Change the background class to alter background image, options are: benches, boots, buildings, city, metro -->
+  <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
+
+    <!-- ======== @Region: #navigation ======== -->
+    <div id="navigation" class="wrapper">
+
+      <div class="header">
+        <div class="header-inner container">
+          <div class="row">
+            <div class="col-md-8">
+                <div class="col-md-3">
+                  <h4><i class="fa fa-calendar-minus-o text-primary "></i>
+                   Agenda 2020</h4> 
+                </div>
+              <div class="navbar-slogan ">
+                The master of the agendas
+                <br> By Victoria Flores
+              </div>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-inline user-menu pull-right">
+                <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="../html/register.html" class="text-uppercase">Registrarse</a></li>
+                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="../html/login.html" class="text-uppercase">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <div class="navbar-text social-media social-media-inline pull-right">
+            <a ng-href="{{face}}"><i class="fa fa-twitter"></i></a>
+            <a ng-href="{{face}}"><i class="fa fa-facebook"></i></a>
+            <a ng-href="{{linkedin}}"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="main-menu">
+              <li class="icon-link">
+                <a href="#" ng-click="home()"><i class="fa fa-home"></i></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" ng-click="agenda()">Agenda</a>
+              </li>
+              <li><a href="#"ng-click="contacto()">Contáctame</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero" id="highlighted">
+      <div class="inner">
+        <!--Slideshow-->
+        <div id="highlighted-slider" class="container">
+          <div class="item-slider" data-toggle="owlcarousel" data-owlcarousel-settings='{"singleItem":true, "navigation":true, "transitionStyle":"fadeUp"}'>
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6 text-right-md item-caption">
+                  <h2 class="h1 text-weight-light">
+                      Bienvenido a tu <span class="text-primary">Agenda</span>
+                    </h2>
+                  <h4>
+                      La mejor agenda on-line esta disponible especialmente para vos.
+                    </h4>
+                  <p>Con esta agenda podras guardar todos tus compromisos, crear alarmas y<br> 
+                      personalizar su funcionalidad para cualquier tarea que necesites.</p>
+                  <a href="https://bootstrapmade.com" class="btn btn-more btn-lg i-right">Ingresar <i class="fa fa-user"></i></a>
+                </div>
+                <div class="col-md-6 hidden-xs">
+                  <img src="../css/img/slides/slide2.png" alt="Slide 2" class="center-block img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
