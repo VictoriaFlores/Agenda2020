@@ -42,26 +42,21 @@
 
   <!-- Main Stylesheet File -->
   <link href="../css/css/style.css" rel="stylesheet">
-
-  <!--Your custom colour override - predefined colours are: colour-blue.css, colour-green.css, colour-lavander.css, orange is default-->
   <link href="#" id="colour-scheme" rel="stylesheet">
 
   <!-- =======================================================
-    Theme Name: Flexor
-    Theme URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
+    App : Agenda2020
+    Author: Victoria Flores
+    GitHub: https://github.com/VictoriaFlores/Agenda2020
   ======================================================= -->
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-    <script src="../js/index.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="../html/comp/agenda.js"></script>
+  <script src="../html/comp/contacto.js"></script>
+  <script src="../js/index.js"></script>
 </head>
 
-<body class="page-index has-hero" ng-controller="IndexController"> 
-
-  <!--select ng-model="pag">
-    <option value="home">home
-    <option value="agenda">agenda
-  </select-->
+<body class="page-index has-hero" ng-controller="IndexController">
 
   <div ng-switch on="pag">
      <div ng-switch-when="home">
@@ -70,11 +65,11 @@
         <ng-include src= "'../html/pie_index.html'"></ng-include></div>
       <div ng-switch-when="agenda">
         <ng-include src= "'../html/cabecera.html'"></ng-include>
-        <ng-include src= "'../html/elements.html'"></ng-include>
+        <agenda ></agenda>
         <ng-include src= "'../html/pie.html'"></ng-include></div>
       <div ng-switch-when="contacto">
         <ng-include src= "'../html/cabecera.html'"></ng-include>
-        <ng-include src= "'../html/contacto.html'"></ng-include>
+        <contacto ></contacto>
         <ng-include src= "'../html/pie.html'"></ng-include></div>
       <div ng-switch-default>
         <ng-include src= "'../html/cabecera_index.html'"></ng-include>
